@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.author    = 'Ramón Roche'
   s.email     = 'mrpollo@gmail.com'
-  s.homepage  = 'http://www.3drobotics.com'
+  s.homepage  = 'https://github.com/mrpollo/spree_product_low_stock'
 
   s.files       = `git ls-files`.split("\n")
   s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
