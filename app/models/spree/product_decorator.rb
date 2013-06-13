@@ -3,8 +3,8 @@ Spree::Product.class_eval do
   attr_accessible :stock_threshold
 
   def stock_warning?
-    return false if !stock_threshold.nil? and stock > stock_threshold
-    true
+    return true if !stock_threshold.nil? and stock < stock_threshold
+    false
   end
 
   def stock
