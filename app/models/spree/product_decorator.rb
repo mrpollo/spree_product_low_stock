@@ -1,13 +1,6 @@
 Spree::Product.class_eval do
-  delegate_belongs_to :master, :stock_threshold
+  delegate_belongs_to :master, :stock_threshold, :stock_warning?
 
-  def stock_warning?
-    return true if !stock_threshold.nil? and stock < stock_threshold
-    false
-  end
-
-  def stock
-    master.stock
-  end
+  alias_method :stock, :total_on_hand
 
 end
